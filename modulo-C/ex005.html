@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passo com o DOM</title>
+    <style>
+        body {
+            background-color: rgb(27, 136, 226);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando Estudos com DOM</h1> <!--Document Object Model-->
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[1] // [0] -> 1° parágrafo que aparecer
+        /*
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou Aguardando'
+        window.document.getElementById('msg').innerText = 'Olá'
+        */
+
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'blue'
+
+
+        /*document.write(p1.innerHTML)*/ 
+        // O innerText pega o texto sem a formação // Já o innerHTML pega o texto com a formatação, ou seja ele considera também as tags dentro do parágrafo.
+        //p1.style.color = 'blue'
+        //corpo.style.background = 'black'
+        /*document.write('<br>Está escrito assim : ' + p1.innerText)*/
+    </script>
+</body>
+</html>
